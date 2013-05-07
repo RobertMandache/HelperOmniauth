@@ -1841,3 +1841,116 @@ Served asset /jquery_ujs.js - 304 Not Modified (3ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 19:10:40 +0300
 Served asset /application.js - 304 Not Modified (8ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20101007212537)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 12:53:24 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2013-04-28 12:53:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 13:07:37 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2013-04-28 13:07:38 -0700
+
+
+Started GET "/auth/autentificare/callback?code=ccfc61d634dca7af6fa7fd9c20117642&response_type=code&state=baa11900adc5ee8773ba59532d5be70c9cb2d5f1cd1483c5" for 127.0.0.1 at 2013-04-28 13:07:56 -0700
+Processing by UserSessionsController#create as HTML
+  Parameters: {"code"=>"ccfc61d634dca7af6fa7fd9c20117642", "response_type"=>"code", "state"=>"baa11900adc5ee8773ba59532d5be70c9cb2d5f1cd1483c5", "provider"=>"autentificare"}
++++ #<OmniAuth::AuthHash credentials=#<Hashie::Mash expires=true expires_at=1367180276 refresh_token="e3fc59aab8952d5cdcea0a80b0801f29" token="eea462585452c3b28f835bc2142ba2b6"> extra=#<Hashie::Mash first_name="Student1" last_name="Student1"> info=#<OmniAuth::AuthHash::InfoHash email=nil> provider="autentificare" uid="3">
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '3' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (17.0ms)[0m  [1mINSERT INTO "users" ("created_at", "first_name", "last_name", "status", "uid", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 28 Apr 2013 20:07:57 UTC +00:00], ["first_name", "Student1"], ["last_name", "Student1"], ["status", nil], ["uid", "3"], ["updated_at", Sun, 28 Apr 2013 20:07:57 UTC +00:00]]
+  [1m[35m (83.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 218ms (ActiveRecord: 107.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 13:07:57 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '3' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Compiled application.css  (1ms)  (pid 1168)
+Compiled jquery.js  (12ms)  (pid 1168)
+Compiled jquery_ujs.js  (1ms)  (pid 1168)
+Compiled application.js  (61ms)  (pid 1168)
+Completed 200 OK in 194ms (Views: 192.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 13:07:57 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 13:07:57 -0700
+Served asset /jquery.js - 200 OK (86ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 13:07:57 -0700
+Served asset /jquery_ujs.js - 200 OK (12ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 13:07:57 -0700
+Served asset /application.js - 200 OK (11ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 13:11:09 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '3' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 13:11:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 13:11:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 13:11:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 13:11:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-28 13:11:19 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '3' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-28 13:11:19 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-28 13:11:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-28 13:11:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 13:11:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

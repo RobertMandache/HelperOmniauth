@@ -15,6 +15,12 @@ class UserSessionsController < ApplicationController
     end    
     user.first_name = omniauth['extra']['first_name']
     user.last_name  = omniauth['extra']['last_name']
+    user.email = omniauth['extra']['email']
+    user.is_student  = omniauth['extra']['student']
+    user.is_teacher = omniauth['extra']['teacher']
+    user.is_management  = omniauth['extra']['management']
+    user.is_admin = omniauth['extra']['admin']
+    user.last_name  = omniauth['extra']['last_name']
     user.save
 
     #p omniauth
