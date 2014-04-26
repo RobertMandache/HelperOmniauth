@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20101007212537) do
     t.string   "is_teacher"
     t.string   "is_management"
     t.string   "is_admin"
+    t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

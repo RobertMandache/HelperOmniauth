@@ -1,9 +1,9 @@
 # Change this omniauth configuration to point to your registered provider
 # Since this is a registered application, add the app id and secret here
-APP_ID = 'ID'
-APP_SECRET = 'SECRET'
+APP_ID = 'APP_ID'
+APP_SECRET = 'APP_SECRET'
 
-CUSTOM_PROVIDER_URL = 'http://0.0.0.0:3000'
+CUSTOM_PROVIDER_URL = 'http://fmi-api.herokuapp.com'
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :autentificare, APP_ID, APP_SECRET

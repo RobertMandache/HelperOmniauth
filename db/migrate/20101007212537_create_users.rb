@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :is_teacher
       t.string :is_management
       t.string :is_admin
+      t.string :token
 
       t.timestamps
     end
