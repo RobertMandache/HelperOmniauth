@@ -1954,3 +1954,174 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-28 13:11:19 -0700
 Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/robert/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-26 03:54:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://0.0.0.0:3002/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2014-04-26 03:54:48 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-26 03:56:00 +0300
+Processing by HomeController#index as HTML
+Redirected to http://0.0.0.0:3002/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2014-04-26 03:56:01 +0300
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/robert/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-26 03:56:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://0.0.0.0:3002/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2014-04-26 03:56:16 +0300
+
+
+Started GET "/auth/autentificare/callback?code=e5be12aacf772943e76434dd43dcc106&response_type=code&state=e575697811096df55a59652f05c55b6fa918ca101fc01748" for 127.0.0.1 at 2014-04-26 03:56:16 +0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"code"=>"e5be12aacf772943e76434dd43dcc106", "response_type"=>"code", "state"=>"e575697811096df55a59652f05c55b6fa918ca101fc01748", "provider"=>"autentificare"}
++++ #<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1398479176 refresh_token="a104ab02c5564507dbe62f187d0766ad" token="b41dd47b9e67e92ee6e86c40c1637bfe"> extra=#<OmniAuth::AuthHash admin="false" email="mandache.robert@gmail.com" first_name="Robert" last_name="Mandache" management="false" student="true" teacher="false"> info=#<OmniAuth::AuthHash::InfoHash email=nil> provider="autentificare" uid="56">
+Completed 500 Internal Server Error in 3ms
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/user_sessions_controller.rb:11:in `create'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-26 03:56:38 +0300
+Processing by HomeController#index as HTML
+Redirected to http://0.0.0.0:3002/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2014-04-26 03:56:38 +0300
+
+
+Started GET "/auth/autentificare/callback?code=c2d00856ec38b33fd82150d624f7830d&response_type=code&state=6e09cc7059d1ec35abe1182886fa2974695422d42d99de3a" for 127.0.0.1 at 2014-04-26 03:56:38 +0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"code"=>"c2d00856ec38b33fd82150d624f7830d", "response_type"=>"code", "state"=>"6e09cc7059d1ec35abe1182886fa2974695422d42d99de3a", "provider"=>"autentificare"}
++++ #<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1398479198 refresh_token="537ce7840efe8e6deddeaea62929195c" token="e3186c911d88ec8e43323611d0c481eb"> extra=#<OmniAuth::AuthHash admin="false" email="mandache.robert@gmail.com" first_name="Robert" last_name="Mandache" management="false" student="true" teacher="false"> info=#<OmniAuth::AuthHash::InfoHash email=nil> provider="autentificare" uid="56">
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '56' LIMIT 1
+Completed 500 Internal Server Error in 27ms
+
+NoMethodError (undefined method `email=' for #<User:0x007f1f74882c10>):
+  app/controllers/user_sessions_controller.rb:18:in `create'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/robert/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-26 03:58:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://0.0.0.0:3002/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2014-04-26 03:58:12 +0300
+
+
+Started GET "/auth/autentificare/callback?code=3fbea2599c1bbe16a0cac7d056f47b4f&response_type=code&state=0d75bd8676a8d0ff59a31892f2d3b92005cb8d0ef12fff81" for 127.0.0.1 at 2014-04-26 03:58:27 +0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"code"=>"3fbea2599c1bbe16a0cac7d056f47b4f", "response_type"=>"code", "state"=>"0d75bd8676a8d0ff59a31892f2d3b92005cb8d0ef12fff81", "provider"=>"autentificare"}
++++ #<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1398479307 refresh_token="fca3959ee9a9509e627d07960a743b97" token="f767769709af55158db9a83a3ab5e1dc"> extra=#<OmniAuth::AuthHash admin="false" email="mandache.robert@gmail.com" first_name="Robert" last_name="Mandache" management="false" student="true" teacher="false"> info=#<OmniAuth::AuthHash::InfoHash email=nil> provider="autentificare" uid="56">
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '56' LIMIT 1
+Completed 500 Internal Server Error in 24ms
+
+NoMethodError (undefined method `email=' for #<User:0x00000002b53130>):
+  app/controllers/user_sessions_controller.rb:18:in `create'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+  [1m[36m (124.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (232.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20101007212537)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "status" varchar(255), "email" varchar(255), "is_student" varchar(255), "is_teacher" varchar(255), "is_management" varchar(255), "is_admin" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20101007212537"]]
+  [1m[36m (101.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/robert/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-26 03:59:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://0.0.0.0:3002/auth/autentificare
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/autentificare" for 127.0.0.1 at 2014-04-26 03:59:29 +0300
+
+
+Started GET "/auth/autentificare/callback?code=7b85a5adafcfc0f9f4091b4b4b96de63&response_type=code&state=08385afb5a6aa13f8c783a8d68e475fc95a8fe0f51209192" for 127.0.0.1 at 2014-04-26 03:59:41 +0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"code"=>"7b85a5adafcfc0f9f4091b4b4b96de63", "response_type"=>"code", "state"=>"08385afb5a6aa13f8c783a8d68e475fc95a8fe0f51209192", "provider"=>"autentificare"}
++++ #<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1398479381 refresh_token="5255df0c4b3bb4fcb7d117c758b789db" token="a04f878d9098165c336ea48706605507"> extra=#<OmniAuth::AuthHash admin="false" email="mandache.robert@gmail.com" first_name="Robert" last_name="Mandache" management="false" student="true" teacher="false"> info=#<OmniAuth::AuthHash::InfoHash email=nil> provider="autentificare" uid="56">
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '56' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "is_admin", "is_management", "is_student", "is_teacher", "last_name", "uid", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 26 Apr 2014 00:59:41 UTC +00:00], ["email", "mandache.robert@gmail.com"], ["first_name", "Robert"], ["is_admin", "false"], ["is_management", "false"], ["is_student", "true"], ["is_teacher", "false"], ["last_name", "Mandache"], ["uid", "56"], ["updated_at", Sat, 26 Apr 2014 00:59:41 UTC +00:00]]
+  [1m[36m (97.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3002/
+Completed 302 Found in 141ms (ActiveRecord: 101.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-26 03:59:41 +0300
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."uid" = '56' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 280ms (Views: 276.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-26 03:59:41 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-26 03:59:41 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-26 03:59:41 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-26 03:59:41 +0300
+
+
+Started GET "/logout" for 127.0.0.1 at 2014-04-26 03:59:43 +0300
+Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."uid" = '56' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/users/sign_out
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
